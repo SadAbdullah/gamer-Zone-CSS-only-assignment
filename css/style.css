@@ -1,11 +1,89 @@
-/* -- Universal style -- */
+/* 
+Template Name: Gamer Zone
+Template URL: https://darkcorner.inc
+Description: Gamer Zone - CSS only Responsive template
+    Author Name: Sad Abdullah
+    Author Website: 
+    Version: 1.0
+
+------------ table of contents ---------- ///
+
+1. Reset CSS style 
+-----------
+
+    1.1 General
+    1.2 Root style
+    1.3 Typography
+    1.4 Buttons
+
+2. Navbar
+-------------
+
+    2.1 Navbar 
+    2.2 Nav logo
+    2.3 Nav menu
+
+        2.3.1 Nav follow
+
+3. Header
+------------
+
+    3.1 header content
+    3.1 header img 
+
+4. About us
+-------------
+
+    4.1 About us img
+    4.1 About us content
+
+5. Online Game
+6. Play instant
+-----------------
+
+    6.1 Play instant content
+    6.2 Play instant img
+
+7. Play online
+----------------
+
+    7.1 Play online img
+    7.2 Play online content
+
+8. Career
+9. Game catagory
+10. Footer
+-------------
+
+    10.1 Footer logo
+    10.2 Footer menu
+    10.3 Footer icon
+    10.4 Footer link
+
+11. Responsive
+-----------------
+
+    11.1 Large devices (desktops)
+    11.2 Medium devices (tablets)
+    11.3 Small devices (landscape phones)
+    11.4 Extra small devices (portrait phones)
+
+
+-----------------------
+            1. Reset CSS style
+------------------------------------------------ */
+/* -------- 1.1 General --------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
+    font-family: var(--body-font);
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 .container {
     max-width: 1200px;
@@ -13,57 +91,57 @@
 }
 
 
-.btn-primary {
-    color: #FFF;
-    font-size: 20px;
+
+/* -------- 1.2 Root style --------- */
+
+:root {
+    --primary-color: #FF42A5;
+    --secondary-color: #4EC5F7;
+    --background-title: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    --background-title-main: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    --background-primary-btn: var(--Linear, linear-gradient(90deg, #FF42A5 13.13%, #FF42A5 87.94%));
+    --white-color: #fff;
+    --footer-gray: #0B0223;
+    --heading-color: #0B0223;
+    --text-color: #534C64;
+    --heading-font: 'Work Sans', sans-serif;
+    --body-font: 'Work Sans', sans-serif;
+    --btn-font: 'Work Sans', sans-serif;
+}
+
+
+
+/* -------- 1.3 Typography --------- */
+
+.header-title-main {
+    font-size: 95px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: var(--background-title-main);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+}
+
+.header-title-sub {
+    color: var(--heading-color);
+    font-size: 48px;
     font-weight: 600;
-    text-transform: capitalize;
-    border: none;
-    outline: none;
-    border-radius: 48px;
-    background: var(--Linear, linear-gradient(90deg, #FF42A5 13.13%, #FF42A5 87.94%));
-    padding: 19px 36px;
-    cursor: pointer;
+    text-transform: uppercase;
 }
-
-.btn-primary:hover {
-    color: #FFF;
-    background: #0B0223;
-}
-
-.btn-secondary {
-    color: #FFF;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: capitalize;
-    border: none;
-    outline: none;
-    border-radius: 48px;
-    background: #4EC5F7;
-    padding: 19px 36px;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.btn-secondary:hover {
-    color: #FFF;
-    background: #0B0223;
-}
-
 
 .section-title {
     font-size: 48px;
     font-weight: 700;
-
-    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background: var(--background-title);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-
 .section-txt {
-    color: #534C64;
+    color: var(--text-color);
     font-size: 1rem;
     font-weight: 400;
     line-height: 30px;
@@ -71,8 +149,52 @@
 
 
 
+/* -------- 1.4 Buttons --------- */
 
-/* -- navbar style -- */
+.btn-primary {
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    border-radius: 48px;
+    background: var(--background-primary-btn);
+    padding: 19px 36px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    color: var(--white-color);
+    background: var(--heading-color);
+}
+
+.btn-secondary {
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    border-radius: 48px;
+    background: var(--secondary-color);
+    padding: 19px 36px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn-secondary:hover {
+    color: var(--white-color);
+    background: var(--heading-color);
+}
+
+
+
+/* -----------------------
+            2. Navbar
+------------------------------------------------ */
+/* -------- 2.1 Navbar --------- */
+
 #navbar {
     padding: 24px 0;
     background: #FBF7FD;
@@ -88,6 +210,8 @@
     justify-content: space-between;
 }
 
+
+/* -------- 2.2 Nav logo --------- */
 
 .nav-logo {
     display: flex;
@@ -109,6 +233,8 @@
 }
 
 
+
+/* -------- 2.3 Nav menu --------- */
 
 .nav-menu {
     display: flex;
@@ -137,6 +263,9 @@
 .nav-menu ul li a:hover {
     color: #FF42A5;
 }
+
+
+/* -------- 2.3.1 Nav follow --------- */
 
 .nav-follow {
     display: flex;
@@ -170,9 +299,11 @@
 }
 
 
+/* -----------------------
+            3 Header Style CSS
+------------------------------------------------ */
+/* -------- 3.1 header content --------- */
 
-
-/* -- header area style -- */
 #header {
     padding: 10px 0 0;
     background-image: url('../images/Group\ 14.png');
@@ -189,34 +320,6 @@
 .header-content {
     width: 50%;
 }
-
-.header-img {
-    width: 50%;
-}
-
-.header-img img {
-    width: 100%;
-    height: auto;
-}
-
-.header-content .header-title-sub {
-    color: #0B0223;
-    font-size: 48px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.header-content .header-title-main {
-    font-size: 95px;
-    font-weight: 800;
-    text-transform: uppercase;
-    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 24px;
-}
-
 
 .header-content .header-icon-box {
     margin-bottom: 45px;
@@ -244,8 +347,24 @@
 
 
 
+/* -------- 3.2 header img --------- */
 
-/* -- about us area style -- */
+.header-img {
+    width: 50%;
+}
+
+.header-img img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* -----------------------
+            4 About us Style CSS
+------------------------------------------------ */
+/* -------- 4.1 About us img --------- */
+
 #about-us {
     padding: 96px 0;
     background-color: #FBF7FD;
@@ -266,6 +385,9 @@
     width: 100%;
     height: auto;
 }
+
+
+/* -------- 4.2 About us content --------- */
 
 .about-us-content {
     width: 35%;
@@ -293,8 +415,11 @@
 }
 
 
+/* -----------------------
+            5 Online Game Style CSS
+------------------------------------------------ */
+/* -------- 5 ONlne game --------- */
 
-/* -- online game area style -- */
 #online-game {
     padding: 96px 0 46px;
     background-color: #fff;
@@ -385,8 +510,11 @@
 }
 
 
+/* -----------------------
+            6 Play instant Style CSS
+------------------------------------------------ */
+/* -------- 6.1 Play instant content --------- */
 
-/* -- play instant area -- */
 #play-instant {
     padding: 96px 0;
 }
@@ -411,6 +539,13 @@
     -webkit-text-fill-color: transparent;
 }
 
+.play-instant-content .section-txt {
+    margin: 19px 0 32px;
+}
+
+
+/* -------- 6.2 Play instant img --------- */
+
 .play-instant-img {
     width: 60%;
     text-align: right;
@@ -429,14 +564,13 @@
     left: 20%;
 }
 
-.play-instant-content .section-txt {
-    margin: 19px 0 32px;
-}
 
 
+/* -----------------------
+            7 Play Online Style CSS
+------------------------------------------------ */
+/* -------- 7.1 Play Online img --------- */
 
-
-/* -- play online area style -- */
 #play-online {
     padding: 56px 0 196px;
 }
@@ -450,19 +584,11 @@
     width: 60%;
 }
 
-.play-online-content {
-    width: 40%;
-    text-align: right;
-    padding-left: 26px;
-}
-
-
 .play-online-img {
     width: 60%;
     text-align: left;
     position: relative;
 }
-
 
 .play-online-img img:first-child {
     width: 70%;
@@ -475,6 +601,15 @@
     right: 20%;
 }
 
+
+/* -------- 7.2 Play Online content --------- */
+
+.play-online-content {
+    width: 40%;
+    text-align: right;
+    padding-left: 26px;
+}
+
 .play-online-content span {
     background: #0B0223;
     background-clip: text;
@@ -482,15 +617,17 @@
     -webkit-text-fill-color: transparent;
 }
 
-
 .play-online-content .section-txt {
     margin: 19px 0 32px;
 }
 
 
 
+/* -----------------------
+            8 Career Style CSS
+------------------------------------------------ */
+/* -------- 8 Career section style --------- */
 
-/* -- career area style -- */
 #career {
     padding: 96px 0;
     background-color: #FF42A5;
@@ -557,8 +694,11 @@
 }
 
 
+/* -----------------------
+            9 Game Catagory Style CSS
+------------------------------------------------ */
+/* -------- 9 Game Catagory section ------- */
 
-/* -- game-catagory-area style -- */
 #game-catagory {
     padding: 96px 0;
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 13.13%, rgba(255, 66, 165, 0.03) 87.94%);
@@ -602,8 +742,11 @@
 
 
 
+/* -----------------------
+            10 Footer Style CSS
+------------------------------------------------ */
+/* -------- 10.1 Footer logo ------- */
 
-/* -- footer area style -- */
 #footer {
     padding: 96px 0;
     background-color: #0B0223;
@@ -624,6 +767,8 @@
     margin-left: 19px;
 }
 
+
+/* -------- 10.2 Footer menu ------- */
 
 .footer-menu {
     margin-bottom: 64px;
@@ -653,6 +798,8 @@
 }
 
 
+/* -------- 10.3 Footer icon ------- */
+
 .footer-icon ul {
     display: flex;
     gap: 56px;
@@ -677,6 +824,8 @@
     color: #FF42A5;
 }
 
+
+/* -------- 10.4 Footer link ------- */
 
 .footer-link {
     margin: 64px 0 26px;
@@ -711,3 +860,5 @@
     font-size: 16px;
     font-weight: 500;
 }
+
+/* -------- The End ------- */
