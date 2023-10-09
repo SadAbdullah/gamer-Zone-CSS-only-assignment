@@ -2,24 +2,279 @@
             11. Responsive (Media queries)
 ----------------------------------------------- */
 
-/* -------- 11.1 Large devices (desktops) ----------- */
-/* -------- (desktops, 992px and up) ------- */
-
-@media (min-width: 992px) and (max-width: 1199.99px) { 
+/* -------- 11.1 Extra small devices (portrait phones) ------ */
+/* -------- (portrait phones, less than 576px) ------- */
+@media (max-width: 575.99px) { 
     .container {
-        width: 95%;
+        width: 88%;
+        margin: 0 auto;
     }
-}
 
 
+    /* -------- 1. Reset CSS style --------- */
 
-/* -------- 11.2 Medium devices (tablets) ------ */
-/* -------- (tablets, 768px and up) ------------------ */
-
-@media (min-width: 768px) and (max-width: 991.99px) { 
-    .container {
-        width: 80%;
+    .header-title-main {
+        font-size: 75px;
     }
+
+    .header-title-sub {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .header-content .btn-primary {
+        margin-right: 14px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 16px 29px;
+    }
+
+    .btn-secondary {
+        font-size: 16px;
+        padding: 16px 29px;
+    }
+
+    .section-txt {
+        font-size: 15px;
+    }
+
+    .purpose .purpose-main-title {
+        font-size: 25px;
+    }
+
+
+
+    /* -------- 2. Navbar CSS style --------- */
+
+    #navbar {
+        position: static;
+    }
+
+    #navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-logo {
+        margin-bottom: 24px;
+    }
+
+
+
+    /* -------- 3 Header CSS style --------- */
+
+    #header {
+        background-size: cover;
+        background-position: center;
+    }
+
+    #header-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .header-content {
+        width: 85%;
+    }
+
+    .header-img {
+        width: 85%;
+        margin: 56px 0 36px;
+    }
+
+
+
+    /* -------- 4 About us CSS style --------- */
+
+    #about-us {
+        padding: 76px 0;
+    }
+
+    #about-us-container {
+        flex-direction: column;
+    }
+
+    .about-us-img {
+        width: 100%;
+    }
+
+    .about-us-content {
+        width: 85%;
+        text-align: center;
+    }
+
+
+
+    /* -------- 5 Online Game CSS style --------- */
+
+    #online-game {
+        padding: 76px 0 46px;
+    }
+
+    .online-game-box-container {
+        width: 70%;
+        margin: 0 auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+    /* -------- 6 Play instant CSS style --------- */
+
+    #play-instant {
+        padding: 76px 0;
+    }
+
+    #play-instant-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .play-instant-content {
+        width: 85%;
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 56px;
+    }
+
+    .play-instant-img {
+        width: 75%;
+        text-align: center;
+        position: relative;
+    }
+
+    .play-instant-img img:first-child {
+        width: 100%;
+        height: auto;
+    }
+
+    .play-instant-img img:last-child {
+        width: 176px;
+        height: auto;
+        position: absolute;
+        top: 56%;
+        left: -15%;
+    }
+
+
+
+    /* -------- 7 Play Online CSS style --------- */
+
+    #play-online {
+        padding: 56px 0 136px;
+    }
+
+    #play-online-container {
+        flex-direction: column-reverse;
+    }
+
+    .play-online-content {
+        width: 85%;
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 56px;
+    }
+
+    .play-online-img {
+        width: 75%;
+        text-align: center;
+        position: relative;
+    }
+    
+
+    .play-online-img img:first-child {
+        width: 100%;
+        height: auto;
+    }
+
+    .play-online-img img:last-child {
+        width: 176px;
+        height: auto;
+        position: absolute;
+        top: 56%;
+        right: -15%;
+    }
+
+
+
+    /* -------- 8 Career CSS style --------- */
+
+    #career {
+        padding: 76px 0;
+        background: #FF42A5;
+        flex-direction: column;
+    }
+
+    #career-container .section-txt {
+        margin-right: 0
+    }
+
+    .career-info-container {
+        margin-right: 0;
+    }
+
+    .career-info-container .career-location {
+        padding-right: 0;
+    }
+
+
+    /* -------- 9 Game Catagory CSS style --------- */
+
+    #game-catagory {
+        padding: 76px 0; 
+    }
+
+    .box .game-catagory-title {
+        font-size: 14px;
+    }
+
+    .box {
+        padding: 10px 15px 10px 10px;
+        gap: 10px;
+
+    }
+
+
+
+    /* -------- 10 Footer CSS style --------- */
+
+    #footer {
+        padding: 76px 0;
+    }
+
+    .footer-menu {
+        margin-bottom: 64px;
+    }
+
+    .footer-menu ul {
+        gap: 36px;
+    }
+
+    .footer-icon ul {
+        gap: 36px;
+        justify-content: center;
+    }
+
+    .footer-link {
+        margin: 64px 0 26px;
+    }
+
+    .footer-link ul {
+        gap: 26px;
+        justify-content: center;
+    }
+
+    #footer p {
+        width: 75%;
+        margin: 0 auto;
+    }
+
 }
 
 
@@ -34,11 +289,22 @@
 
 
 
-/* -------- 11.4 Extra small devices (portrait phones) ------ */
-/* -------- (portrait phones, less than 576px) ------- */
-@media (max-width: 575.99px) { 
+/* -------- 11.3 Medium devices (tablets) ------ */
+/* -------- (tablets, 768px and up) ------------------ */
+
+@media (min-width: 768px) and (max-width: 991.99px) { 
     .container {
-        width: 86%;
-        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+
+
+/* -------- 11.4 Large devices (desktops) ----------- */
+/* -------- (desktops, 992px and up) ------- */
+
+@media (min-width: 992px) and (max-width: 1199.99px) { 
+    .container {
+        width: 95%;
     }
 }

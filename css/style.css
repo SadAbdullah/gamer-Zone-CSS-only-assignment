@@ -63,10 +63,11 @@ Description: Gamer Zone - CSS only Responsive template
 11. Responsive
 -----------------
 
-    11.1 Large devices (desktops)
-    11.2 Medium devices (tablets)
-    11.3 Small devices (landscape phones)
-    11.4 Extra small devices (portrait phones)
+    11.1 Extra small devices (portrait phones)
+    11.2 Small devices (landscape phones)
+    11.3 Medium devices (tablets)
+    11.4 Large devices (desktops)
+    
 
 
 -----------------------
@@ -582,10 +583,6 @@ html {
 
 .play-online-img {
     width: 60%;
-}
-
-.play-online-img {
-    width: 60%;
     text-align: left;
     position: relative;
 }
@@ -702,7 +699,6 @@ html {
 #game-catagory {
     padding: 96px 0;
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 13.13%, rgba(255, 66, 165, 0.03) 87.94%);
-    
 }
 
 
@@ -777,6 +773,7 @@ html {
 .footer-menu ul {
     display: flex;
     gap: 56px;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -803,6 +800,7 @@ html {
 .footer-icon ul {
     display: flex;
     gap: 56px;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -834,6 +832,7 @@ html {
 .footer-link ul {
     display: flex;
     gap: 56px;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -859,6 +858,8 @@ html {
     text-align: center;
     font-size: 16px;
     font-weight: 500;
+    margin-top: 39px;
+    line-height: 1.9rem;
 }
 
 /* -------- The End ------- */
